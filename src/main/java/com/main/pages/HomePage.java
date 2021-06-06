@@ -8,7 +8,6 @@ import org.testng.Assert;
 import static com.main.base.Constants.expectedTitle;
 
 public class HomePage extends BaseMethods {
-
     WebElement BTN_MENU = driver.findElement(By.xpath("//span[text()='More']"));
     WebElement BTN_CAREERS = driver.findElement(By.xpath("//h5[text()='Careers']"));
 

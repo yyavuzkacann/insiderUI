@@ -8,29 +8,41 @@ import org.testng.annotations.Test;
 
 public class applyPosition {
 
-    @Test
-    public void ApplyQAPosition() {
+    @Test(priority=0)
+    public void GoToCareers() {
         HomePage homePage = new HomePage();
-        CareersPage careersPage = new CareersPage();
-        OpenPositionsPage openPositionsPage = new OpenPositionsPage();
-        PositionDetailPage positionDetailPage = new PositionDetailPage();
-
         homePage
                 .checkPageLoad()
                 .clickMenu()
                 .clickCareers();
+
+    }
+
+    @Test(priority=1)
+    public void GoToDreamJob() {
+        CareersPage careersPage = new CareersPage();
         careersPage
                 .checkOurStoryLoaded()
                 .checkFindYourCallingLoaded()
                 .checkOurLocationsLoaded()
                 .checkLifeAtInsiderLoaded()
                 .clickDreamJobButton();
+    }
+
+    @Test(priority=2)
+    public void CheckPosition() {
+        OpenPositionsPage openPositionsPage = new OpenPositionsPage();
         openPositionsPage
                 .selectLocation()
                 .selectDepartment()
                 .checkPositionsNamesContains()
                 .checkPositionsLocationsContains()
                 .clickApplyNowButton();
+    }
+
+    @Test(priority=3)
+    public void ApplyPosition() {
+        PositionDetailPage positionDetailPage = new PositionDetailPage();
         positionDetailPage
                 .checkPositionDetailPageLoad();
     }
