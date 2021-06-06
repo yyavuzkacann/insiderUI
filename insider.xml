@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Insider UI Project">
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Insider UI Project">
+        <classes>
+            <class name="com.main.applyPosition"/>
+        </classes>
+
+    </test>
+</suite>
